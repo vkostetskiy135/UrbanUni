@@ -15,4 +15,9 @@ def letter_print():
         time.sleep(1)
 
 
+thread = Thread(target=number_print)
+thread.start()
+time.sleep(0.5)
+thread = Thread(target=letter_print())
+thread.start()
 
