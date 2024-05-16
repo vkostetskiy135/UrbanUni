@@ -6,7 +6,7 @@ data_structure = [
     ((), [{(2, 'Urban', ('Urban2', 35))}])
 ]
 
-
+#Вариант с очередью
 def count_whatever_inside(data):
     main_queue = [data]
     sum_ = 0
@@ -25,8 +25,22 @@ def count_whatever_inside(data):
     return sum_
 
 
+#Вариант с рекурсией
+def count_contents(data):
+    summary = 0
+    if isinstance(data, str):
+        summary += len(data)
+    elif isinstance(data, int):
+        summary += data
+    elif isinstance(data, dict):
+        for k, v in data.items():
+            summary += count_contents(k)
+            summary += count_contents(v)
+    else:
+        for i in data:
+            summary += count_contents(i)
+    return summary
+
+
 print(count_whatever_inside(data_structure))
-
-
-
-
+print(count_contents(data_structure))
