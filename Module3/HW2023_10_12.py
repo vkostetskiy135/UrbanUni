@@ -43,4 +43,4 @@ def count_contents(data):
 
 
 print(count_whatever_inside(data_structure))
-print(count_contents(data_structure))
+ print(count_contents(data_structure))

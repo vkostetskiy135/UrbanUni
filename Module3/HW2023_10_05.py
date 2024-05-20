@@ -8,5 +8,7 @@ def test2(a, b, c):
     print(a, b, c)
 
 
+x, y, z = 1, 2, 3
+
 test()
-test2()
+test2(x, y, z)
