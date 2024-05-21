@@ -4,6 +4,7 @@ class House:
 
     def __str__(self):
         return f'''Number of floors -> {self.numberOfFloors}'''
+
     def setNewNumberOfFloors(self, floors):
         self.numberOfFloors = floors
 
