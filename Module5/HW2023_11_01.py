@@ -77,10 +77,7 @@ class UrTube:
 
 
 class Video:
-    '''
-    Класс видео, содержит в себе название видео, контент в формате str
 
-    '''
     def __init__(self, title, duration, adult_mode=False):
         #Название
         self.title = title
