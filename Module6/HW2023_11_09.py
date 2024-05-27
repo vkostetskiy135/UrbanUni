@@ -92,9 +92,9 @@ class Cube(Figure):
 
     def set_sides(self, *args):
         if len(args) == 1:
-            self.__sides = [args[0] for _ in range(self.sides_count)]
-        elif self.__sides is None:
-            self.__sides = [1 for _ in range(self.sides_count)]
+            self._Figure__sides = [args[0] for _ in range(self.sides_count)]
+        elif self._Figure__sides is None:
+            self._Figure__sides = [1 for _ in range(self.sides_count)]
 
 
     def get_volume(self):
@@ -102,6 +102,23 @@ class Cube(Figure):
 
 
 
-circle1 = Circle((200, 200, 100), 10, 15) # (Цвет, стороны)
+circle1 = Circle((200, 200, 100), 10) # (Цвет, стороны)
 cube1 = Cube((222, 35, 130), 6)
+
+# Проверка на изменение цветов:
+circle1.set_color([55, 66, 77]) # Изменится
+cube1.set_color([300, 70, 15]) # Не изменится - выводится 'Invalid color!'
+print(circle1.get_color())
+print(cube1.get_color())
+
+# Проверка на изменение сторон:
+cube1.set_sides(5, 3, 12, 4, 5) # Не изменится
+circle1.set_sides(15) # Изменится
 print(cube1.get_sides())
+print(circle1.get_sides())
+
+# Проверка периметра (круга), это и есть длина:
+print(len(circle1))
+
+# Проверка объёма (куба):
+print(cube1.get_volume())
