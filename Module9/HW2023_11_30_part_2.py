@@ -21,6 +21,7 @@ def func_factory(operation):
             return a ** b
         return square
 
+
 func1 = func_factory('add')
 print(func1(2, 2))
 func1 = func_factory('subtract')
@@ -35,12 +36,15 @@ print(func1(2, 3))
 #Задача 2
 some_func = lambda x: x * 2
 
+
 def some_same_func(x):
     return x * 2
+
 
 example = 'Hello world!\n'
 print(some_func(example))
 print(some_same_func(example))
+
 
 #Задача 3
 class Rect:
