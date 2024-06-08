@@ -53,7 +53,7 @@ class Rect:
         self.b = b
 
     def __call__(self, *args, **kwargs):
-        return self.b * self.b
+        return self.a * self.b
 
 rect = Rect(5, 5)
 print(rect())
