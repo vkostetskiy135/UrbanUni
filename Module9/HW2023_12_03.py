@@ -1,4 +1,4 @@
-def decor(func):
+def is_prime(func):
     def wrapper(*args, **kwargs):
         func_result = func(*args, **kwargs)
         dividable_by = []
@@ -13,7 +13,7 @@ def decor(func):
     return wrapper
 
 
-@decor
+@is_prime
 def sum_three(a, b, c):
     return a + b + c
 
