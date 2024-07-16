@@ -20,4 +20,4 @@ def employees_rewrite(sort_type):
         json.dump({'employees': result_sorted}, output, indent=4)
 
 
-employees_rewrite('firstName')
+employees_rewrite('fIrStNaMe')
